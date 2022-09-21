@@ -44,5 +44,16 @@ if shell == "":
 
 
 while True:
-    promt = input(pyShell.shellStyle(shell))
-    
+    try:
+        command = input(pyShell.shellStyle(shell))
+        pyShell.shellCmd(command)
+
+    except KeyboardInterrupt:
+
+        try:
+            pyShell.shellCmd("exit")
+
+        except KeyboardInterrupt:
+            print("Goodbye!")
+            exit()
+            

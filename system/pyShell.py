@@ -3,6 +3,7 @@
 from colorama import init, Fore, Back, Style, deinit
 from subprocess import call
 from time import sleep
+import core
 
 init()
 
@@ -24,3 +25,10 @@ def shellStyle(SHELL):
     elif SHELL == "fish":
         return (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS" + Fore.RED + "/" + Fore.White + " # " + Fore.RESET)
             
+#The shell and PyThOS program launcher commands
+def shellCmd(command):
+    if command == "exit":
+        core.exitConfirm()
+
+    if command == "clear":
+        core.cls()
