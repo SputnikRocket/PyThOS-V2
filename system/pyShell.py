@@ -32,3 +32,6 @@ def shellCmd(command):
 
     if command == "clear":
         core.cls()
+
+    if command == "counter":
+        core.counter()
