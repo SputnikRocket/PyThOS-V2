@@ -27,4 +27,12 @@ def exitConfirm():
 
 def cls():
     call("clear")
+
+def counter():
+
+    c =  0
+
+    while True:
+        print(c)
+        c = c + 1
     
