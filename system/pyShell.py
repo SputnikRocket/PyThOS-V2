@@ -32,8 +32,11 @@ def shellCmd(command):
     if command == "exit":
         core.exitConfirm()
 
-    if command == "clear":
+    elif command == "clear":
         core.cls()
 
-    if command == "counter":
+    elif command == "counter":
         core.counter()
+
+    elif command not in ["exit","clear","counter"]:
+        core.cnf(command)
