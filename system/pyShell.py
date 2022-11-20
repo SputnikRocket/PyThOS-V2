@@ -22,7 +22,7 @@ def shellStyle(SHELL):
         return (Fore.WHITE + "# " + Fore.RESET)
     
     elif SHELL == "fish":
-        return (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS" + Fore.RED + "/" + Fore.White + " # " + Fore.RESET)
+        return (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS" + Fore.RED + "/" + Fore.WHITE + " # " + Fore.RESET)
 
     elif SHELL not in ["bash","zsh","sh","csh","fish"]:
         return (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS:/# " + Fore.RESET)            
