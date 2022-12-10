@@ -35,6 +35,7 @@ def counter():
     while True:
         print(c)
         c = c + 1
+        cls()
 
 def cnf(command):
     print(command + ": Command Not Found")    
