@@ -38,5 +38,8 @@ def shellCmd(command):
     elif command == "counter":
         core.counter()
 
-    elif command not in ["exit","clear","counter"]:
+    elif command == "yuptime":
+        core.yuptime()
+
+    elif command not in ["exit","clear","counter","yuptime"]:
         core.cnf(command)

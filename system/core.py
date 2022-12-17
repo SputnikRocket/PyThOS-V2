@@ -37,5 +37,8 @@ def counter():
         c = c + 1
         cls()
 
+def yuptime():
+    call("uptime")
+
 def cnf(command):
     print(command + ": Command Not Found")    
