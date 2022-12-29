@@ -7,25 +7,35 @@ import core
 
 init()
 
-#Shell style definition
+bashstyle = (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS:/# " + Fore.RESET)
+
+zshstyle = (Fore.WHITE + "PyThOS# " + Fore.RESET)
+
+shstyle = (Fore.WHITE + "# " + Fore.RESET)
+
+cshstyle = (Fore.WHITE + "# " + Fore.RESET)
+
+fishstyle = (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS" + Fore.RED + "/" + Fore.WHITE + " # " + Fore.RESET)
+
+#Shell style init
 def shellStyle(SHELL):
     if SHELL == "bash":
-        return (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS:/# " + Fore.RESET)
+        return bashstyle
 
     elif SHELL == "zsh":
-        return (Fore.WHITE + "PyThOS# " + Fore.RESET)
+        return zshstyle
 
     elif SHELL == "sh":
-        return (Fore.WHITE + "# " + Fore.RESET)
+        return shstyle
 
     elif SHELL == "csh":
-        return (Fore.WHITE + "# " + Fore.RESET)
+        return cshstyle
     
     elif SHELL == "fish":
-        return (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS" + Fore.RED + "/" + Fore.WHITE + " # " + Fore.RESET)
+        return fishstyle
 
     elif SHELL not in ["bash","zsh","sh","csh","fish"]:
-        return (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS:/# " + Fore.RESET)            
+        return bashstyle            
 
 #The shell and PyThOS program launcher commands
 def shellCmd(command):
