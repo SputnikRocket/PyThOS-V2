@@ -32,7 +32,7 @@ def shellStyle(SHELL):
         return cshstyle
     
     elif SHELL == "fish":
-        return fishstyle
+        return fishstyle 
 
     elif SHELL not in ["bash","zsh","sh","csh","fish"]:
         return bashstyle            
