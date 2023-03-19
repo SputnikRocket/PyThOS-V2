@@ -17,6 +17,9 @@ cshstyle = (Fore.WHITE + "# " + Fore.RESET)
 
 fishstyle = (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS" + Fore.RED + "/" + Fore.WHITE + " # " + Fore.RESET)
 
+altzshstyle = (Fore.BLUE + "┌─[" + Fore.GREEN + "root" + Fore.BLUE + "@" + Fore.CYAN + "PyThOS" + Fore.BLUE + ''']
+└─[''' + Fore.MAGENTA + "$" + Fore.BLUE + "] " + Fore.RESET)
+
 #Shell style init
 def shellStyle(SHELL):
     if SHELL == "bash":
@@ -34,7 +37,10 @@ def shellStyle(SHELL):
     elif SHELL == "fish":
         return fishstyle 
 
-    elif SHELL not in ["bash","zsh","sh","csh","fish"]:
+    elif SHELL == "altzsh":
+        return altzshstyle
+
+    elif SHELL not in ["bash","zsh","sh","csh","fish","altzsh"]:
         return bashstyle            
 
 #The shell and PyThOS program launcher commands
