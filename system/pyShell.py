@@ -38,6 +38,7 @@ def shellStyle(SHELL):
         return bashstyle            
 
 #The shell and PyThOS program launcher commands
+availCmds = ["exit","clear","counter","yuptime","cmds"]
 def shellCmd(command):
     if command == "exit":
         core.exitConfirm()
@@ -51,5 +52,10 @@ def shellCmd(command):
     elif command == "yuptime":
         core.yuptime()
 
-    elif command not in ["exit","clear","counter","yuptime"]:
+    elif command == "cmds":
+        for availCmd in availCmds:
+            print(availCmd)
+
+    elif command not in availCmds:
         core.cnf(command)
+
