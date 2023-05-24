@@ -14,7 +14,9 @@
 depends: `colorama`
 
 example usage:
+
 `./start.sh`
+
 `./start.sh <theme>`
 
 ## This Project is very much a WIP.
