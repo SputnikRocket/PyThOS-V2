@@ -2,7 +2,7 @@
 
 from colorama import init, Fore, Back, Style, deinit
 from subprocess import call
-from time import sleep
+from os import system
 import core
 
 init()
