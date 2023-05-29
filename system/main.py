@@ -7,7 +7,7 @@ import core
 import pyFlask
 import pyHelp
 import pyShell
-from subprocess import call
+from os import system
 from time import sleep
 
 shell = ""
@@ -21,10 +21,10 @@ elif len(argv) == 2:
 
 
 #Boot initialization
-call("clear")
+system("@cls||clear")
 boot.bootInit()
 sleep(2)
-call("clear")
+system("@cls||clear")
 
 #Start messages
 print(Fore.WHITE + "[" + Fore.GREEN + "SUCCESS" + Fore.WHITE + "]" + " Boot splash completed")
