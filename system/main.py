@@ -21,10 +21,10 @@ elif len(argv) == 2:
 
 
 #Boot initialization
-call("clear")
+call("@cls||clear")
 boot.bootInit()
 sleep(2)
-call("clear")
+call("@cls||clear")
 
 #Start messages
 print(Fore.WHITE + "[" + Fore.GREEN + "SUCCESS" + Fore.WHITE + "]" + " Boot splash completed")
