@@ -3,6 +3,7 @@
 from colorama import init, Fore, Back, Style, deinit
 from os import system
 from time import sleep
+import core
 
 #Stuff to call before doing anything else
 
@@ -40,7 +41,7 @@ bootProgress = ["*", "* *", "* * *", "* * * *", "* * * * *", "* * * * * *", "* *
 def bootInit():
     init()
     for i in range(8):
-        system("@cls||clear")
+        core.cls()
         primaryFrame()
         print()
         borderLine()

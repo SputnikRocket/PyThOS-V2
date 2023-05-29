@@ -2,7 +2,6 @@
 
 from colorama import init, Fore, Back, Style, deinit
 from os import system
-from time import sleep
 import core
 
 init()
