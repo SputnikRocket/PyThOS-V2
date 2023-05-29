@@ -26,7 +26,7 @@ def exitConfirm():
         print()
 
 def cls():
-    call("clear")
+    call("@cls||clear")
 
 def counter():
 
