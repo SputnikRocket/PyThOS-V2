@@ -6,7 +6,7 @@ import pyHelp
 import pyShell
 import pyFlask
 from colorama import init, Fore, Back, Style, deinit
-from subprocess import call
+from os import system
 from time import sleep
 
 def exitConfirm():
@@ -26,7 +26,7 @@ def exitConfirm():
         print()
 
 def cls():
-    call("@cls||clear")
+    system("@cls||clear")
 
 def counter():
 
@@ -38,7 +38,7 @@ def counter():
         cls()
 
 def yuptime():
-    call("uptime")
+    system("uptime")
 
 def cnf(command):
     print(command + ": Command Not Found")    
