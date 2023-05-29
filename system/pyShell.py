@@ -1,8 +1,8 @@
 #PyThOS shell and related stuff
 
 from colorama import init, Fore, Back, Style, deinit
-from subprocess import call
 from os import system
+from time import sleep
 import core
 
 init()
