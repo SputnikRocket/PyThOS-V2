@@ -1,7 +1,7 @@
 #Boot animation module for PyThOS
 
 from colorama import init, Fore, Back, Style, deinit
-from subprocess import call
+from os import system
 from time import sleep
 
 #Stuff to call before doing anything else
@@ -40,7 +40,7 @@ bootProgress = ["*", "* *", "* * *", "* * * *", "* * * * *", "* * * * * *", "* *
 def bootInit():
     init()
     for i in range(8):
-        call("@cls||clear")
+        system("@cls||clear")
         primaryFrame()
         print()
         borderLine()
