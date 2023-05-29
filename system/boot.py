@@ -40,7 +40,7 @@ bootProgress = ["*", "* *", "* * *", "* * * *", "* * * * *", "* * * * * *", "* *
 def bootInit():
     init()
     for i in range(8):
-        call("clear")
+        call("@cls||clear")
         primaryFrame()
         print()
         borderLine()
