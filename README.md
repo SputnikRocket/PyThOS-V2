@@ -8,9 +8,6 @@
 
 * Has some executable commands built in, such as exit, clear, yuptime(only reports host uptime for now), cmds(lists available commands), and counter, which just counts really fast.
 
-**Notes:**
-* "clear" doesn't work on windows, as it uses Unix "clear" command. the boot splash also depends on "clear"
-
 depends: `colorama`
 
 example usage:
