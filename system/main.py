@@ -8,7 +8,24 @@ import pyFlask
 import pyHelp
 import pyShell
 from os import system
+import os.path
 from time import sleep
+
+rcExists = os.path.exists("py.rc")
+if rcExists == False:
+    rc = open("py.rc", "w")
+    rc.writelines("""splash=True
+dmesg=True
+bash
+""")
+    rc.close()
+
+rc = open("py.rc", "r")
+rcConf = rc.readlines()
+bootEnable = rcConf[0]
+dmesgEnable = rcConf[1]
+shellPreset = rcConf[2]
+rc.close()
 
 shell = ""
 init()
@@ -21,16 +38,20 @@ elif len(argv) == 2:
 
 
 #Boot initialization
-core.cls()
-boot.bootInit()
-sleep(2)
-core.cls()
+if  bootEnable == "splash=True":
+    core.cls()
+    boot.bootInit()
+    sleep(2)
+    core.cls()
+if bootEnable == "splash=False":
+    core.cls()
 
 #Start messages
-print(Fore.WHITE + "[" + Fore.GREEN + "SUCCESS" + Fore.WHITE + "]" + " Boot splash completed")
+if dmesgEnable == "dmesg=True":
+    print(Fore.WHITE + "[" + Fore.GREEN + "SUCCESS" + Fore.WHITE + "]" + " Boot splash completed")
 
-if shell == "":
-    print(Fore.WHITE + "[" + Fore.YELLOW + "WARNING" + Fore.WHITE + "]" + " \"SHELL\" not set, defaulting to bash" + Fore.RESET)
+    if shell == "":
+        print(Fore.WHITE + "[" + Fore.YELLOW + "WARNING" + Fore.WHITE + "]" + " \"SHELL\" not set, defaulting to" + shellPreset + Fore.RESET)
 
 
 
