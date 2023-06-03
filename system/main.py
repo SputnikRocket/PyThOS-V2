@@ -26,8 +26,11 @@ bash
 rc = open("py.rc", "r")
 rcConf = rc.readlines()
 bootEnable = rcConf[0]
+bootEnable = bootEnable.replace("\n", "")
 dmesgEnable = rcConf[1]
+dmesgEnable = dmesgEnable.replace("\n", "")
 shellPreset = rcConf[2]
+shellPreset = shellPreset.replace("\n", "")
 rc.close()
 
 #Manual shell style parameter
