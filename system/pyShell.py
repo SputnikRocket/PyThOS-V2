@@ -21,7 +21,7 @@ altzshstyle = (Fore.BLUE + "┌─[" + Fore.GREEN + "root" + Fore.BLUE + "@" + F
 └─[''' + Fore.MAGENTA + "$" + Fore.BLUE + "] " + Fore.RESET)
 
 #Shell style init
-def shellStyle(SHELL):
+def shellStyle(SHELL, RCSHELL):
     if SHELL == "bash":
         return bashstyle
 
