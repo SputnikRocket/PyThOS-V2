@@ -63,7 +63,7 @@ if dmesgEnable == "dmesg=True":
 #Shell startup
 while True:
     try:
-        command = input(pyShell.shellStyle(shell))
+        command = input(pyShell.shellStyle(shell, shellPreset))
         pyShell.shellCmd(command)
 
     except KeyboardInterrupt:
