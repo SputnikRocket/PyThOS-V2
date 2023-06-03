@@ -13,7 +13,6 @@ from time import sleep
 
 """This checks if rc file exists, 
 if not creates with default values"""
->>>>>>> 52b8509 (fixed rc, implemented shell theme in rc, more commenting)
 rcExists = os.path.exists("py.rc")
 if rcExists == False:
     rc = open("py.rc", "w")
