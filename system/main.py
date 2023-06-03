@@ -58,7 +58,7 @@ if dmesgEnable == "dmesg=True":
     print(Fore.WHITE + "[" + Fore.GREEN + "SUCCESS" + Fore.WHITE + "]" + " Boot splash completed")
 
     if shell == "":
-        print(Fore.WHITE + "[" + Fore.YELLOW + "WARNING" + Fore.WHITE + "]" + " \"SHELL\" not set, defaulting to" + shellPreset + Fore.RESET)
+        print(Fore.WHITE + "[" + Fore.YELLOW + "WARNING" + Fore.WHITE + "]" + " \"SHELL\" not set, defaulting to " + shellPreset + Fore.RESET)
 
     elif dmesgEnable == "dmesg=False":
         core.cls()
