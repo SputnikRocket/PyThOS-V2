@@ -11,6 +11,11 @@ from os import system
 import os.path
 from time import sleep
 
+<<<<<<< HEAD
+=======
+"""This checks if rc file exists, 
+if not creates with default values"""
+>>>>>>> 52b8509 (fixed rc, implemented shell theme in rc, more commenting)
 rcExists = os.path.exists("py.rc")
 if rcExists == False:
     rc = open("py.rc", "w")
@@ -20,6 +25,10 @@ bash
 """)
     rc.close()
 
+<<<<<<< HEAD
+=======
+#Read rc file and set PyThOS config
+>>>>>>> 52b8509 (fixed rc, implemented shell theme in rc, more commenting)
 rc = open("py.rc", "r")
 rcConf = rc.readlines()
 bootEnable = rcConf[0]
@@ -27,6 +36,7 @@ dmesgEnable = rcConf[1]
 shellPreset = rcConf[2]
 rc.close()
 
+#Manual shell style parameter
 shell = ""
 init()
 
@@ -51,10 +61,17 @@ if dmesgEnable == "dmesg=True":
     print(Fore.WHITE + "[" + Fore.GREEN + "SUCCESS" + Fore.WHITE + "]" + " Boot splash completed")
 
     if shell == "":
+<<<<<<< HEAD
         print(Fore.WHITE + "[" + Fore.YELLOW + "WARNING" + Fore.WHITE + "]" + " \"SHELL\" not set, defaulting to" + shellPreset + Fore.RESET)
 
+=======
+        print(Fore.WHITE + "[" + Fore.YELLOW + "WARNING" + Fore.WHITE + "]" + " \"SHELL\" not set, defaulting to " + shellPreset + Fore.RESET)
+elif dmesgEnable == "dmesg=False":
+    core.cls()
+>>>>>>> 52b8509 (fixed rc, implemented shell theme in rc, more commenting)
 
 
+#Shell startup
 while True:
     try:
         command = input(pyShell.shellStyle(shell))

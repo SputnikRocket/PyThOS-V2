@@ -6,6 +6,7 @@ import core
 
 init()
 
+#Shell themes
 bashstyle = (Fore.RED + "root" + Fore.MAGENTA + "@" + Fore.WHITE + "PyThOS:/# " + Fore.RESET)
 
 zshstyle = (Fore.WHITE + "PyThOS# " + Fore.RESET)
@@ -40,7 +41,30 @@ def shellStyle(SHELL):
         return altzshstyle
 
     elif SHELL not in ["bash","zsh","sh","csh","fish","altzsh"]:
+<<<<<<< HEAD
         return bashstyle            
+=======
+        if RCSHELL == "bash":
+            return bashstyle
+
+        elif RCSHELL == "zsh":
+            return zshstyle
+
+        elif RCSHELL == "sh":
+            return shstyle
+
+        elif RCSHELL == "csh":
+            return cshstyle
+    
+        elif RCSHELL == "fish":
+            return fishstyle 
+
+        elif RCSHELL == "altzsh":
+            return altzshstyle
+
+        elif RCSHELL not in ["bash","zsh","sh","csh","fish","altzsh"]:
+            return bashstyle           
+>>>>>>> 52b8509 (fixed rc, implemented shell theme in rc, more commenting)
 
 #The shell and PyThOS program launcher commands
 availCmds = ["exit","clear","counter","yuptime","cmds"]
