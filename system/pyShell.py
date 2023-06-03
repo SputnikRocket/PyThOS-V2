@@ -41,9 +41,6 @@ def shellStyle(SHELL):
         return altzshstyle
 
     elif SHELL not in ["bash","zsh","sh","csh","fish","altzsh"]:
-<<<<<<< HEAD
-        return bashstyle            
-=======
         if RCSHELL == "bash":
             return bashstyle
 
@@ -64,7 +61,6 @@ def shellStyle(SHELL):
 
         elif RCSHELL not in ["bash","zsh","sh","csh","fish","altzsh"]:
             return bashstyle           
->>>>>>> 52b8509 (fixed rc, implemented shell theme in rc, more commenting)
 
 #The shell and PyThOS program launcher commands
 availCmds = ["exit","clear","counter","yuptime","cmds"]
